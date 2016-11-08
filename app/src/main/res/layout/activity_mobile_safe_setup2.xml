@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xuange.phonesafe.Activity.MobileSafeSetup2Activity">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="Step2：绑定手机Sim卡" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="通过绑定手机Sim卡，下次重启手机如果检测到Sim卡有变化，就会发送报警短信。"
+        android:textSize="16dp" />
+
+    <com.xuange.phonesafe.View.SettingItemView xmlns:mobilesafe="http://schemas.android.com/apk/res/com.xuange.phonesafe"
+        android:id="@+id/step_2_simbound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desoff="Sim卡未绑定"
+        mobilesafe:desopen="Sim卡已绑定"
+        mobilesafe:destitle="点击绑定Sim卡">
+
+    </com.xuange.phonesafe.View.SettingItemView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_online" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/simbound" />
+
+        <Button
+            android:id="@+id/step_2_bt_pre"
+            style="@style/PreButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <Button
+            android:id="@+id/step_2_bt_next"
+            style="@style/NextButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

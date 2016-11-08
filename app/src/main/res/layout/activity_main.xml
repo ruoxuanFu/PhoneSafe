@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.HomeActivity">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="我会的技能都在这里" />
+
+    <!--android:ellipsize=" " 省略点的位置-->
+    <!--文字跑马灯效果
+        1.设置为marquee
+        获取焦点
+        2.android:focusable="true"
+        3.android:focusableInTouchMode="true"
+        无限循环
+        4.android:marqueeRepeatLimit="marquee_forever"-->
+    <!-- 如果要用自定义控件实现文字跑马灯效果，
+    实际上是重写原来的TextView，让其一直获取焦点 -->
+    <!--    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="啊~啊~啊~啊~五环，你比四环多一环~啊~啊~啊~啊~五环，你比六环少一环~"
+            android:textColor="#000" />-->
+
+    <!-- 自定义获取焦点的TextView -->
+    <com.xuange.phonesafe.View.FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="啊~啊~啊~啊~五环，你比四环多一环~啊~啊~啊~啊~五环，你比六环少一环~"
+        android:textColor="#000" />
+
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:verticalSpacing="30dp">
+
+    </GridView>
+
+</LinearLayout>
